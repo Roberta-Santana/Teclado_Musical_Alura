@@ -11,8 +11,12 @@ function tocarSomClap(){
 }
 document.querySelector('.tecla_clap').onclick = tocarSomClap; */
 
+function tocaSom(idElementoAudio){
+    document.querySelector(idElementoAudio).play();
+}
+
 const listaDeTeclas = document.querySelectorAll('.tecla');
-/* const listaDeSons = document.querySelector('#som');*/
+const listaDeSons = document.querySelectorAll('#som');
 let contador = 0;
 
 while(contador<listaDeTeclas.length){
