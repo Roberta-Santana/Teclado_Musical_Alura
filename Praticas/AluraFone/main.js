@@ -16,18 +16,15 @@ for(i=0; i<listaNumerica.length;i++){
 } */
 
 const listaNumerica = document.querySelectorAll('input[type=button]');
-
 const addNum = document.querySelector('input[type=tel]');
 
-
-for(i=0;i<listaNumerica.length;i++){
+/* for(i=0;i<listaNumerica.length;i++){
     const tecla = listaNumerica[i];
     console.log(tecla);
     tecla.onclick = function(){
         addNum.value = addNum.value+ tecla.value;
-    }
-    
-}
+    }    
+} */
 
 
 
