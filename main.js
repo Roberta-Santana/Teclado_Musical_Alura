@@ -58,7 +58,7 @@ const tecla =listaDeTeclas[contador];
 const instrumento = tecla.classList[1];
 const IdAudio = `#som_${instrumento}`;
 
-tecla.onclick = function(){
+ tecla.onclick = function(){
     tocaSom(IdAudio);
 }
 }
