@@ -47,9 +47,23 @@ necessário criar indice I, no while não esquecer de i++
         i++;}
 */
 
-/*QUESTÃO 5 - Usando o for */
-
+/*QUESTÃO 5 - Usando o for 
 for(i=0;i<listaButton.length;i++){
     console.log(i)
 listaButton[i].onclick = incrementoContador;
+}
+*/
+
+for(i=0;i<listaButton.length;i++){
+  const tecla= listaButton[i];
+  console.log(tecla);
+  tecla.onclick = incrementoContador;
+  tecla.onkeydown = function(){
+    tecla.classList.add('ativa');
+  }
+
+  tecla.onkeyup = function(){
+    tecla.classList.remove('ativa');
+  }
+
 }
