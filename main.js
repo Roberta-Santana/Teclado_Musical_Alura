@@ -11,8 +11,16 @@ function tocarSomClap(){
 }
 document.querySelector('.tecla_clap').onclick = tocarSomClap; */
 
-function tocaSom(idElementoAudio){
-    document.querySelector(idElementoAudio).play();
+function tocaSom(seletorAudio){
+    const elemento = document.querySelector(seletorAudio);
+    console.log(elemento);
+    if(elemento===null){
+        console.log("Elemento não encontrado")
+    }
+    if(elemento != null && elemento.localName==='audio'){
+        console.log(elemento.localName);
+        elemento.play();
+    }
 }
 
 const listaDeTeclas = document.querySelectorAll('.tecla');
@@ -28,7 +36,6 @@ const listaDeTeclas = document.querySelectorAll('.tecla');
         tecla =  listaDeTeclas[contador];
     console.log(tecla);
 
-
         //2º LISTA QUE ASSOCIA O INDICE DA LISTA TECLAS/BOTÃO A UMA CLASSE ESPECÍFICA (QUE REPETE NO ID DO AUDIO) 
     const instrumento = tecla.classList[1];
     -> instrumento = a tecla/button.tecla.tecla.som com referencia por indice +
@@ -37,7 +44,6 @@ const listaDeTeclas = document.querySelectorAll('.tecla');
         Intrumento é uma lista, que associa o indice da lista tecla, a uma classe espefica tecla_som
         instrumento
      console.log(instrumento);
-
 
         //3º LISTA QUE ASSOCIA O ID DO SOM E A CLASSE DA LISTA INSTRUMENTO #som_${instrumento} CRASE
     const IdAudio = `#som_${instrumento}`;
@@ -48,7 +54,6 @@ const listaDeTeclas = document.querySelectorAll('.tecla');
     tecla.onclick=function(){ 
         tocaSom(IdAudio);
     };
-
     contador++;
     console.log(contador);
 }*/
@@ -62,8 +67,11 @@ const IdAudio = `#som_${instrumento}`;
     tocaSom(IdAudio);
 }
 
-tecla.onkeydown= function(){
-    tecla.classList.add('ativa');
+tecla.onkeydown= function(evento){
+    console.log(evento);
+    if(evento.code === "Space" || evento.code === "Enter"){
+        tecla.classList.add('ativa');
+    }
 }
 tecla.onkeyup = function(){
     tecla.classList.remove('ativa');

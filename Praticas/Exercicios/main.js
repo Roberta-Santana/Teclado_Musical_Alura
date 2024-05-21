@@ -58,6 +58,7 @@ for(i=0;i<listaButton.length;i++){
   const tecla= listaButton[i];
   console.log(tecla);
   tecla.onclick = incrementoContador;
+  
   tecla.onkeydown = function(){
     tecla.classList.add('ativa');
   }
