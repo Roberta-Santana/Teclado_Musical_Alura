@@ -30,26 +30,26 @@ function incrementoContador(){
     console.log('Contador: '+contador);
 }
 //Contador valor 0,(botão 1) incrementa a lista
-listaButton[0].onclick = incrementoContador;
+//listaButton[0].onclick = incrementoContador;
 
 /*QUESTÃO 3 - Incrementar sempre que o quarto elemento do array for clicado 
-    
     listaButton[3].onclick = function (){
         incrementoContador()
     }; OUUUUU
-    listaButton[3].onclick = incrementoContador; 
+        listaButton[3].onclick = incrementoContador; 
     se colocar () a função executa sozinha e uma única vez */
 
 /*QUESTÃO 4 - Incrementar quando algum botão da lista for clicado
 necessário criar indice I, no while não esquecer de i++
-let i=0;
-while(i<listaButton.length){
-    listaButton[i].onclick = incrementoContador;
-    i++; 
-}*/
+    let i=0;
+    while(i<listaButton.length){
+        listaButton[i].onclick = incrementoContador;
+        i++;}
+*/
 
-/*QUESTÃO 5 - Usando o for*/
-/* for(i=0;i<listaButton.length;i++){
-    listaButton[i].onclick = incrementoContador;
+/*QUESTÃO 5 - Usando o for */
+
+for(i=0;i<listaButton.length;i++){
+    console.log(i)
+listaButton[i].onclick = incrementoContador;
 }
- */
