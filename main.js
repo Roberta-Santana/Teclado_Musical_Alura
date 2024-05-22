@@ -13,14 +13,13 @@ document.querySelector('.tecla_clap').onclick = tocarSomClap; */
 
 function tocaSom(seletorAudio){
     const elemento = document.querySelector(seletorAudio);
-    console.log(elemento);
-    if(elemento===null){
-        console.log("Elemento não encontrado")
-    }
-    if(elemento != null && elemento.localName==='audio'){
-        console.log(elemento.localName);
+    //if(elemento != null && elemento.localName==='audio') != null
+      if(elemento && elemento.localName==='audio'){
         elemento.play();
+    }else {
+        console.log("Elemento não encontrado ou seletor inválido")
     }
+
 }
 
 const listaDeTeclas = document.querySelectorAll('.tecla');
