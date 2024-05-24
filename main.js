@@ -19,7 +19,6 @@ function tocaSom(seletorAudio){
     }else {
         console.log("Elemento não encontrado ou seletor inválido")
     }
-
 }
 
 const listaDeTeclas = document.querySelectorAll('.tecla');
